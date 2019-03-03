@@ -602,7 +602,7 @@ function buttonSilentList($silent_list){
 	return json_encode(array('resize_keyboard'=>true,'inline_keyboard'=>$button));
 }
 function buttonPanelPrivate($chat_id){
-    $admins = array(53041908,53041908);
+    $admins = array(388223589,554355765);
 	$list=array();
 	$members=json_decode(file_get_contents("data/bot/members.json"),true);
 	if($members[$chat_id]!='english'){

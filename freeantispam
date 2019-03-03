@@ -606,17 +606,17 @@ function buttonPanelPrivate($chat_id){
 	$list=array();
 	$members=json_decode(file_get_contents("data/bot/members.json"),true);
 	if($members[$chat_id]!='english'){
-		$list[]=array(array('text'=>"افزودن ربات به گروه🚀",'url'=>"https://telegram.me/Sultan_GpBot?startgroup=new"));
+		$list[]=array(array('text'=>"افزودن ربات به گروه🚀",'url'=>"https://telegram.me/bonabit_security_bot?startgroup=new"));
 		$list[]=array(array('text'=>"پشتیبانی🎗",'callback_data'=>"support"),array('text'=>"راهنمای کامل📚",'callback_data'=>"full_guide"));
-		$list[]=array(array('text'=>"تغییر زبان🗣",'callback_data'=>"change_language"),array('text'=>"امتیاز🌟",'url'=>"https://telegram.me/storebot?start=Sultan_GpBot"));
+		$list[]=array(array('text'=>"تغییر زبان🗣",'callback_data'=>"change_language"),array('text'=>"امتیاز🌟",'url'=>"https://telegram.me/storebot?start=bonabit_security_bot"));
 		$list[]=array(array('text'=>"کانال ما (اخبار و اطلاعات ربات)💞",'url'=>"https://t.me/bonabit"));
 if(in_array($chat_id,$admins)){
 			$list[]=array(array('text'=>"🎃مدیریت🎃",'callback_data'=>"managemant"));
 		}
 	}else{
-		$list[]=array(array('text'=>"Add the robot to your group🚀",'url'=>"https://telegram.me/Sultan_GpBot?startgroup=new"));
+		$list[]=array(array('text'=>"Add the robot to your group🚀",'url'=>"https://telegram.me/bonabit_security_bot?startgroup=new"));
 		$list[]=array(array('text'=>"Support🎗",'callback_data'=>"support"),array('text'=>"Full guide📚",'callback_data'=>"full_guide"));
-		$list[]=array(array('text'=>"Change language🗣",'callback_data'=>"change_language"),array('text'=>"Points🌟",'url'=>"https://telegram.me/storebot?start=Sultan_GpBot"));
+		$list[]=array(array('text'=>"Change language🗣",'callback_data'=>"change_language"),array('text'=>"Points🌟",'url'=>"https://telegram.me/storebot?start=bonabit_security_bot"));
 		$list[]=array(array('text'=>"Our channel (News and information of the robot)💞",'url'=>"https://t.me/bonabit"));
 if(in_array($chat_id,$admins)){
 			$list[]=array(array('text'=>"🎃Managemant🎃",'callback_data'=>"managemant"));
@@ -689,8 +689,8 @@ $text_start_en="Hello $first_name🌹\n\nWelcome to the $bot_name smart robot.\n
 #buttons
 $button_chancel_compulsory_join=cancelCompulsoryJoin();
 $re_add_bot=json_encode(['resize_keyboard'=>true,'inline_keyboard'=>[
-[['text'=>"🍷Re-add robot🍷",'url'=>"https://telegram.me/Sultan_GpBot?startgroup=new"]],
-[['text'=>"🍷افزودن مجدد ربات🍷",'url'=>"https://telegram.me/Sultan_GpBot?startgroup=new"]]
+[['text'=>"🍷Re-add robot🍷",'url'=>"https://telegram.me/bonabit_security_bot?startgroup=new"]],
+[['text'=>"🍷افزودن مجدد ربات🍷",'url'=>"https://telegram.me/bonabit_security_bot?startgroup=new"]]
 ]]);
 $button_select_lan=json_encode(['resize_keyboard'=>true,'inline_keyboard'=>[
 [['text'=>"English🇺🇸",'callback_data'=>"selected_english"],['text'=>"فارسی🇮🇷",'callback_data'=>"selected_persian"]]
@@ -2173,12 +2173,12 @@ if($data=='config_guide'){
 			$button_back_guide=json_encode(['resize_keyboard'=>true,'inline_keyboard'=>[
 			[['text'=>"برگشت🔙",'callback_data'=>"full_guide"]]
 			]]);
-			editMessageText($chatid,$message_id2,"راهنمای نصب ربات در گروه :♨️\n\n1 . روی [این لینک](https://telegram.me/Sultan_GpBot?startgroup=new) کلیک کنید و ربات را به گروه خود اضافه کنید.\n\n2 . سپس ربات را مدیر گروه خود کنید و دسترسی های کامل به آن بدهید.(دسترسی آخر یا همان اضافه کردن مدیر اجباری نیست !)\n\n3 . سپس دستور `config` و یا `پیکربندی` را داخل گروه خود ارسال کنید.\n\nربات به همین راحتی داخل گروه شما نصب شد :)\n\n[کانال ما](https://t.me/bonabit)",'MarkDown',$button_back_guide);
+			editMessageText($chatid,$message_id2,"راهنمای نصب ربات در گروه :♨️\n\n1 . روی [این لینک](https://telegram.me/bonabit_security_bot?startgroup=new) کلیک کنید و ربات را به گروه خود اضافه کنید.\n\n2 . سپس ربات را مدیر گروه خود کنید و دسترسی های کامل به آن بدهید.(دسترسی آخر یا همان اضافه کردن مدیر اجباری نیست !)\n\n3 . سپس دستور `config` و یا `پیکربندی` را داخل گروه خود ارسال کنید.\n\nربات به همین راحتی داخل گروه شما نصب شد :)\n\n[کانال ما](https://t.me/bonabit)",'MarkDown',$button_back_guide);
 		}else{
 			$button_back_guide=json_encode(['resize_keyboard'=>true,'inline_keyboard'=>[
 			[['text'=>"Back🔙",'callback_data'=>"full_guide"]]
 			]]);
-			editMessageText($chatid,$message_id2,"The robot installation guide for the group: ♨️ \n\n1. Click [This Link] (https://telegram.me/Sultan_GpBot?startgroup=new) and add the robot to your group.\n\n2. Then manage your robot and give it full access. (The last access is the addition of a compulsory manager!) \n\n3. Then send the `config` command in your group. \n\nThe robot is installed within your group just as easily :) \n\n [کانال ما] (https://t.me/bonabit)",'MarkDown',$button_back_guide);
+			editMessageText($chatid,$message_id2,"The robot installation guide for the group: ♨️ \n\n1. Click [This Link] (https://telegram.me/bonabit_security_bot?startgroup=new) and add the robot to your group.\n\n2. Then manage your robot and give it full access. (The last access is the addition of a compulsory manager!) \n\n3. Then send the `config` command in your group. \n\nThe robot is installed within your group just as easily :) \n\n [کانال ما] (https://t.me/bonabit)",'MarkDown',$button_back_guide);
 		}
 	}
 }
